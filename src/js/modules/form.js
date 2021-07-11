@@ -2,7 +2,7 @@ export default class Form {
 
     constructor (forms) {
         this.forms = document.querySelectorAll(forms);
-        this.inputs = document.querySelectorAll('inpur');
+        this.inputs = document.querySelectorAll('input');
         this.message = {
             loading: 'Loading...',
             success: 'Thank you! We will call you.',
@@ -113,7 +113,7 @@ export default class Form {
                     })
                     .catch(() => statusMessage.textContent = this.message.failure)
                     .finally(() => {
-                        this.claerInputs();
+                        this.clearInputs();
                         setTimeout(() => {
                             statusMessage.remove();
                         }, 5000);
